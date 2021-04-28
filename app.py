@@ -43,6 +43,7 @@ def community():
 @app.route('/new', methods=('GET', 'POST'))
 def new():
     if request.method == 'POST':
+        option = request.form['option']
         email = request.form['email']
         title = request.form['title']
         content = request.form['content']
@@ -51,8 +52,8 @@ def new():
             flash('Title is required.')
         else:
             conn = get_db_connection()
-            conn.execute('INSERT INTO posts (email, title, content) VALUES (?, ?, ?)',
-                         (email, title, content))
+            conn.execute('INSERT INTO posts (option, email, title, content) VALUES (?, ?, ?, ?)',
+                         (option, email, title, content))
             conn.commit()
             conn.close()
             return redirect(url_for('community'))

@@ -23,7 +23,7 @@
                     </svg>
                 </a>
                 <span class="navbar-brand mb-0 h1">
-                    <a href = "/">Craigslist</a>
+                    <a href="/">Craigslist</a>
                 </span>
 
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
@@ -37,27 +37,31 @@
 
 <div class="container mt-5 mb-3">
     <form method="post">
-        {#        <h4>Please select one of the following:</h4>#}
-        {#        <div class="container mb-3">#}
-        {#            <div class="form-check">#}
-        {#                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">#}
-        {#                <label class="form-check-label" for="flexRadioDefault1">#}
-        {#                    Childcare#}
-        {#                </label>#}
-        {#            </div>#}
-        {#            <div class="form-check">#}
-        {#                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">#}
-        {#                <label class="form-check-label" for="flexRadioDefault2">#}
-        {#                    Volunteers#}
-        {#                </label>#}
-        {#            </div>#}
-        {#            <div class="form-check">#}
-        {#                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">#}
-        {#                <label class="form-check-label" for="flexRadioDefault3">#}
-        {#                    General Community#}
-        {#                </label>#}
-        {#            </div>#}
-        {#        </div>#}
+        <h4>Please select one of the following:</h4>
+        <div class="container mb-3">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="option" id="flexRadioDefault1"
+                       value="childcare">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Childcare
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="option" id="flexRadioDefault2"
+                       value="volunteers">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    Volunteers
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="option" id="flexRadioDefault3"
+                       value="general">
+                <label class="form-check-label" for="flexRadioDefault3">
+                    General Community
+                </label>
+            </div>
+            option = request.form['option']
+        </div>
 
 
         <div class="form-group mb-3 mt-5">
