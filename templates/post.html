@@ -5,7 +5,7 @@
 {% block content %}
     <h2>{% block title %} {{ post['title'] }} {% endblock %}</h2>
     <span class="badge badge-primary">{{ post['created'] }}</span>
-    <p>Posted Type: {{ post['option'] }}</p>
+    <p>Post Category: {{ post['option'] }}</p>
     <p>Posted by: {{ post['email'] }}</p>
     <p>{{ post['content'] }}</p>
 {% endblock %}
